@@ -27,6 +27,9 @@ class Home extends React.Component<HomeProps, HomeState> {
             <Link to="/demo/css-in-js">Demo: CSS-in-JS (emotion)</Link>
           </li>
           <li>
+            <Link to="/demo/state-store">Demo: State Store</Link>
+          </li>
+          <li>
             <Link to="/demo/broken-link">Demo: Broken Link</Link>
           </li>
         </ul>
