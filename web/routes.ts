@@ -20,6 +20,10 @@ export const routesList: RouteData[] = [
     component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/state-store/state-store.page')),
   },
   {
+    path: '/demo/fibonacci/:n',
+    component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/fibonacci[n]/fibonacci.page')),
+  },
+  {
     path: '/',
     component: loadable(() => import(/* webpackChunkName: "home" */ 'pages/home/home.page')),
   },

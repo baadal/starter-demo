@@ -33,3 +33,8 @@ export interface NotFoundPageData extends PageDataRoot {
 export interface StateStoreDemoData extends PageDataRoot {
   timestamp: string;
 }
+
+export interface FibonacciNumData extends PageDataRoot {
+  n: string;
+  fn: string;
+}
