@@ -8,6 +8,10 @@ export const routesList: RouteData[] = [
     component: loadable(() => import(/* webpackChunkName: "about" */ 'pages/about/about.page')),
   },
   {
+    path: '/demo/css-styles',
+    component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/css-styles/css-styles.page')),
+  },
+  {
     path: '/',
     component: loadable(() => import(/* webpackChunkName: "home" */ 'pages/home/home.page')),
   },
