@@ -12,6 +12,10 @@ export const routesList: RouteData[] = [
     component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/css-styles/css-styles.page')),
   },
   {
+    path: '/demo/css-in-js',
+    component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/css-in-js/css-in-js.page')),
+  },
+  {
     path: '/',
     component: loadable(() => import(/* webpackChunkName: "home" */ 'pages/home/home.page')),
   },
