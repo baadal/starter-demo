@@ -1,0 +1,9 @@
+.fancyLink {
+  display: inline-block;
+}
+
+.fancyLink:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background-clip: text;
+  color: transparent;
+}

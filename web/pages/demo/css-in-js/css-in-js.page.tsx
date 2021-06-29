@@ -1,11 +1,13 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import { css, ClassNames } from '@emotion/react';
 import styled from '@emotion/styled';
+import { css as cssx, cx } from '@emotion/css';
 
 import { H3 } from 'starter/ui';
 import { CssInJsDemoData } from 'model/pagedata.model';
 
 import common from 'assets/css/common.module.scss';
+import styles from './css-in-js.module.scss';
 
 const StyledDiv = styled.div<any>`
   color: ${props => (props.primary ? 'darkorchid' : 'green')};
@@ -89,7 +91,19 @@ class CssInJsDemo extends React.Component<CssInJsDemoProps, CssInJsDemoState> {
         <div className={common.vspace2} />
         <StyledDiv4 primary>Styled Div 4 (really awesome!)</StyledDiv4>
         <div className={common.vspace2} />
-        <StyledComponent>Styled Component</StyledComponent>
+        <StyledComponent>Styled Component 1</StyledComponent>
+        <div className={common.vspace2} />
+        <ClassNames>
+          {({ css: cssx, cx }) => ( // eslint-disable-line
+            <div className={cx(styles.fancyLink, cssx({ color: 'green' }))}>  {/* eslint-disable-line */}
+              Styled Component 2
+            </div>
+          )}
+        </ClassNames>
+        <div className={common.vspace2} />
+        <div className={cx(styles.fancyLink, cssx({ color: 'green' }))}>  {/* eslint-disable-line */}
+          Styled Component 3
+        </div>
         <div className={common.vspace2} />
       </>
     );
