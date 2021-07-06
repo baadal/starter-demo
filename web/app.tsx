@@ -6,7 +6,9 @@ import App from 'starter/web/app';
 import Layout from 'components/layout';
 
 const globalStyles: any = {
-  body: {},
+  body: {
+    maxWidth: '800px',
+  },
 };
 
 const MyApp: React.FC<AppPropsRoot> = props => (

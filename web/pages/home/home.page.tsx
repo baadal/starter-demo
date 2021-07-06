@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
+import { Link } from 'starter/ui';
 import { PropsRoot } from 'model/common.model';
 import { HomePageData } from 'model/pagedata.model';
 
@@ -13,45 +12,31 @@ class Home extends React.Component<HomeProps, HomeState> {
     const { pageData } = this.props;
     const title = pageData?.title || '';
     const description = pageData?.description || '';
-    const message = pageData?.message || '';
-    const siteTitle = pageData?.seo?.siteTitle || '';
 
     return (
       <>
         <div className={styles.heroBanner}>
-          <div className={styles.heroText}>
-            <a href="https://starterjs.dev/" target="_blank" rel="noreferrer">
-              {siteTitle}
-            </a>
-            <span className={styles.heroSplit}>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
-            <span className={styles.heroSubtext}>{title}</span>
-          </div>
-          <div className={styles.punchline}>{description}</div>
+          <div className={styles.heroText}>{title}</div>
         </div>
-        <div className={common.infoCard}>
-          <div>
-            Edit this page: <code>web/pages/home/home.page.tsx</code>
-          </div>
-          <div className={common.infoCardItem}>
-            Link to this page: `<Link to="/">Home</Link>`
-          </div>
-        </div>
-        <div className={styles.docsDesc}>
-          <a href="https://starterjs.dev/docs" target="_blank" rel="noreferrer">
-            <div className={styles.docsItem}>
-              <div>Documentation</div>
-              <div>&nbsp;&nbsp;</div>
-              <div className={styles.docsIcon}>
-                <FaExternalLinkAlt />
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className={styles.bottomMsg}>
-          <span className={styles.emojiBig}>🚀</span>
-          <span>&nbsp;&nbsp;</span>
-          <em>{message}</em>
-        </div>
+        <div className={styles.punchline}>{description}</div>
+        <ul className={`${common.ulist} ${styles.ulist}`}>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/demo/broken-link">Demo: Broken Link</Link>
+          </li>
+        </ul>
+        <div className={common.vspace} />
+        <div className={styles.punchline}>Performance</div>
+        <ul className={`${common.ulist} ${styles.ulist}`}>
+          <li>
+            <Link to="https://web.dev/measure/">Lighthouse</Link>
+          </li>
+          <li>
+            <Link to="https://gtmetrix.com/">GTmetrix</Link>
+          </li>
+        </ul>
       </>
     );
   }

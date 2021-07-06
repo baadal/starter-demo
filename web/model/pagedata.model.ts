@@ -22,10 +22,7 @@ export interface PageDataRoot {
 }
 
 export type AboutPageData = PageDataRoot;
-
-export interface HomePageData extends PageDataRoot {
-  message: string;
-}
+export type HomePageData = PageDataRoot;
 
 export interface NotFoundPageData extends PageDataRoot {
   message: string;
