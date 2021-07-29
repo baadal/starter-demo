@@ -28,6 +28,10 @@ export const routesList: RouteData[] = [
     component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/esnext/esnext.page')),
   },
   {
+    path: '/demo/external-data',
+    component: loadable(() => import(/* webpackChunkName: "demo" */ 'pages/demo/external-data/external-data.page')),
+  },
+  {
     path: '/',
     component: loadable(() => import(/* webpackChunkName: "home" */ 'pages/home/home.page')),
   },

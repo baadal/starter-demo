@@ -36,6 +36,9 @@ class Home extends React.Component<HomeProps, HomeState> {
             <Link to="/demo/esnext">Demo: ES6+ Features &amp; Web APIs</Link>
           </li>
           <li>
+            <Link to="/demo/external-data">Demo: External Data</Link>
+          </li>
+          <li>
             <Link to="/demo/broken-link">Demo: Broken Link</Link>
           </li>
         </ul>

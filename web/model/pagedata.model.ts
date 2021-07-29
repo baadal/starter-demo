@@ -39,3 +39,14 @@ export interface FibonacciNumData extends PageDataRoot {
   n: string;
   fn: string;
 }
+
+export interface Photo {
+  albumId: number;
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
+}
+export interface ExternalDataResp extends PageDataRoot {
+  album: Photo[];
+}
